@@ -21,7 +21,7 @@
 }
 .App-header {
   background-color: #060e95 !important;
-  height: 100px;
+  min-height: 100px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -89,6 +89,12 @@
 .rencontre-heure{
   background-color: #060e95;
   color: white;
+  font-weight: bolder;
+}
+.rencontre-score{
+  background-color: #337d0e ;
+  color: white;
+  font-weight: bolder;
 }
 .rencontre-equipe{
   background-color: black;

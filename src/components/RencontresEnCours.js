@@ -33,7 +33,7 @@ const RencontresEnCoursComponent = ({ apiUrl }) => {
           ) : null}
             <div className='rencontre-grid'>
                 <div className='rencontre-equipe'>{item.equipe_1} <img width="24px" height="24px" src={item.logo_circle_equipe_1} alt={item.logo_circle_equipe_1}/></div>
-                <div className='rencontre-heure'>{item.heure_de_debut}</div>
+                <div className={(item.statut==="à venir")?'rencontre-heure':'rencontre-score'}>{(item.statut==="à venir")?item.heure_de_debut:(item.score_eq_1+' - '+item.score_eq_2)}</div>
                 <div className='rencontre-equipe'><img width="24px" height="24px" src={item.logo_circle_equipe_2} alt={item.logo_circle_equipe_2}/> {item.equipe_2}</div>
             </div>
         </div>

@@ -54,31 +54,31 @@ function App() {
         <Routes>
           <Route
             path="/tableau-offensif"
-            element={<TableauOffensifComponent apiUrl="http://preprod.rimo0631.odns.fr/wp-json/custom/v2/equipes_offensives" />}
+            element={<TableauOffensifComponent apiUrl="https://judoproleague.com/wp-json/custom/v2/equipes_offensives" />}
           />
           <Route
             path="/tableau-classement"
-            element={<TableauClassementComponent apiUrl="http://preprod.rimo0631.odns.fr/wp-json/custom/v2/classement_equipes" />}
+            element={<TableauClassementComponent apiUrl="https://judoproleague.com/wp-json/custom/v2/classement_equipes" />}
           />
           <Route
             path="/top-10"
-            element={<Top10EquipesComponent apiUrl="http://preprod.rimo0631.odns.fr/wp-json/custom/v2/classement_equipes" />}
+            element={<Top10EquipesComponent apiUrl="https://judoproleague.com/wp-json/custom/v2/classement_equipes" />}
           />
           <Route
             path="/top-marqueurs"
-            element={<TopMarqueursComponent apiUrl="http://preprod.rimo0631.odns.fr/wp-json/custom/v2/judokas_marqueurs" />}
+            element={<TopMarqueursComponent apiUrl="https://judoproleague.com/wp-json/custom/v2/judokas_marqueurs" />}
           />
           <Route
             path="/stats-judokas"
-            element={<StatsJudokasComponent apiUrl="http://preprod.rimo0631.odns.fr/wp-json/custom/v2/stats_judokas" />}
+            element={<StatsJudokasComponent apiUrl="https://judoproleague.com/wp-json/custom/v2/stats_judokas" />}
           />
           <Route
             path="/rencontres-a-venir"
-            element={<RencontresAVenirComponent apiUrl="http://preprod.rimo0631.odns.fr/wp-json/custom/v2/rencontres_suivantes" />}
+            element={<RencontresAVenirComponent apiUrl="https://judoproleague.com/wp-json/custom/v2/rencontres_suivantes" />}
           />
           <Route
             path="/rencontres-en-cours"
-            element={<RencontresEnCoursComponent apiUrl="http://preprod.rimo0631.odns.fr/wp-json/custom/v2/rencontres_actuelles" />}
+            element={<RencontresEnCoursComponent apiUrl="https://judoproleague.com/wp-json/custom/v2/rencontres_actuelles" />}
           />
           {/* Ajoutez d'autres routes pour vos autres composants ici */}
         </Routes>
