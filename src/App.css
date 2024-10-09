@@ -3,21 +3,27 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 50px;
   pointer-events: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nav-link{
+  color: white;
+  font-size: 20px;
 }
-
+.nav-link:hover {
+  color: #4DE800 !important;
+  text-decoration: underline;
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+  color: #4DE800 !important;
+  text-decoration: underline;
+  background-color: rgba(255, 255, 255, 0);
+}
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #060e95 !important;
+  height: 100px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
@@ -28,11 +34,77 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.main-content{
+  align-items: center;
+    justify-content: center;
+    display: flex;
+  margin-top: 100px;
 }
+.tableau-jpl td,.tableau-jpl th,.tableau-jpl tr{
+  border: solid 1px;
+}
+.tableau-jpl th{
+  text-transform: uppercase;
+  padding: 0 12px;
+  text-align: start;
+}
+.tableau-jpl td{
+  text-align: start;
+  padding: 0 10px;
+}
+.tableau-jpl {
+ color: white;
+ background: linear-gradient(122deg, rgb(2 46 255) 0%, rgba(151, 6, 211, 1) 100%)
+}
+.btn-pagination{
+  border: 2px solid #000 !important;
+  padding: 6px 12px;
+  border-radius: 7px;
+  color: black;
+}
+.btn-pagination:hover {
+  border: 2px solid #E737F8 !important;
+  background: #E737F8;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 7px;
+}
+.search-input {
+  font-size: 25px;
+  padding: 5px 25px;
+  border-radius: 0px 0px 15px 15px;
+  color: #000 !important;
+  box-shadow: none;
+  border-color: #000 !important;
+  border-radius: 60px !important;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.rencontre-grid{
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr;
+  gap: 10px;
+  margin-bottom: 5px;
+}
+.rencontre-heure{
+  background-color: #060e95;
+  color: white;
+}
+.rencontre-equipe{
+  background-color: black;
+  color: white;
+}
+.rencontre-date {
+  color: white;
+  background: linear-gradient(122deg, rgb(2 46 255) 0%, rgba(151, 6, 211, 1) 100%);
+  margin: 10px 0px;
+ }
+ .rencontre-journee{
+  color: white;
+  background: linear-gradient(122deg, rgb(2 46 255) 0%, rgba(151, 6, 211, 1) 100%);
+  width: fit-content;
+  padding: 10px 20px;
+ }
+ .pagination span{
+  padding: 6px 12px;
+ }
