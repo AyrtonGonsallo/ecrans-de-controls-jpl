@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const RencontresEnCoursComponent = ({ apiUrl }) => {
+const TableauFinalComponent = ({ apiUrl }) => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -21,14 +21,14 @@ const RencontresEnCoursComponent = ({ apiUrl }) => {
   return (
     <div>
         {data.length > 0 && (
-            <div className='rencontre-journee'>{data[0].journee}</div> // Affichage de la propriété 'journee' du premier élément
+            <div className='rencontre-journee'>Tableau final judo pro league 2025</div> // Affichage de la propriété 'journee' du premier élément
         )}
     {data.map((item, index) => (
         <div key={index}>
              {/* Afficher la date seulement si elle est différente de celle de la rencontre précédente */}
-          {index === 0 || item.full_date_de_debut !== data[index - 1].full_date_de_debut ? (
+          {index === 0 || item.journee !== data[index - 1].journee ? (
             <div className='rencontre-date'>
-              {item.full_date_de_debut}
+              {item.journee}
             </div>
           ) : null}
             <div className='rencontre-grid'>
@@ -52,4 +52,4 @@ const RencontresEnCoursComponent = ({ apiUrl }) => {
   );
 };
 
-export default RencontresEnCoursComponent;
+export default TableauFinalComponent;

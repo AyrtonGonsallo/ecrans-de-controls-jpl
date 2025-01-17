@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link, useLocation } from 'react-router-dom';
 import TableauOffensifComponent from './components/TableauOffensifComponent';
+import TableauFinalComponent from './components/TableauFinalComponent';
 import TableauClassementComponent from './components/TableauClassementComponent';
 import RencontresAVenirComponent from './components/RencontresAVenir';
 import RencontresEnCoursComponent from './components/RencontresEnCours';
@@ -32,6 +33,9 @@ function App() {
               <Nav.Link as={Link} to="/tableau-classement" active={location.pathname === "/tableau-classement"}>Tableau Classement</Nav.Link>
             </Nav.Item>
             <Nav.Item>
+              <Nav.Link as={Link} to="/tableau-final" active={location.pathname === "/tableau-final"}>Tableau Final</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
               <Nav.Link as={Link} to="/top-10" active={location.pathname === "/top-10"}>Top 10 équipes</Nav.Link>
             </Nav.Item>
             <Nav.Item>
@@ -54,31 +58,35 @@ function App() {
         <Routes>
           <Route
             path="/tableau-offensif"
-            element={<TableauOffensifComponent apiUrl="https://judoproleague.com/wp-json/custom/v2/equipes_offensives" />}
+            element={<TableauOffensifComponent apiUrl="http://www.rimo0631.odns.fr/wp-json/custom/v2/equipes_offensives" />}
           />
           <Route
             path="/tableau-classement"
-            element={<TableauClassementComponent apiUrl="https://judoproleague.com/wp-json/custom/v2/classement_equipes" />}
+            element={<TableauClassementComponent apiUrl="http://www.rimo0631.odns.fr/wp-json/custom/v2/classement_equipes" />}
+          />
+          <Route
+            path="/tableau-final"
+            element={<TableauFinalComponent apiUrl="http://www.rimo0631.odns.fr/wp-json/custom/v2/final_rencontres" />}
           />
           <Route
             path="/top-10"
-            element={<Top10EquipesComponent apiUrl="https://judoproleague.com/wp-json/custom/v2/classement_equipes" />}
+            element={<Top10EquipesComponent apiUrl="http://www.rimo0631.odns.fr/wp-json/custom/v2/classement_equipes" />}
           />
           <Route
             path="/top-marqueurs"
-            element={<TopMarqueursComponent apiUrl="https://judoproleague.com/wp-json/custom/v2/judokas_marqueurs" />}
+            element={<TopMarqueursComponent apiUrl="http://www.rimo0631.odns.fr/wp-json/custom/v2/judokas_marqueurs" />}
           />
           <Route
             path="/stats-judokas"
-            element={<StatsJudokasComponent apiUrl="https://judoproleague.com/wp-json/custom/v2/stats_judokas" />}
+            element={<StatsJudokasComponent apiUrl="http://www.rimo0631.odns.fr/wp-json/custom/v2/stats_judokas" />}
           />
           <Route
             path="/rencontres-a-venir"
-            element={<RencontresAVenirComponent apiUrl="https://judoproleague.com/wp-json/custom/v2/rencontres_suivantes" />}
+            element={<RencontresAVenirComponent apiUrl="http://www.rimo0631.odns.fr/wp-json/custom/v2/rencontres_suivantes" />}
           />
           <Route
             path="/rencontres-en-cours"
-            element={<RencontresEnCoursComponent apiUrl="https://judoproleague.com/wp-json/custom/v2/rencontres_actuelles" />}
+            element={<RencontresEnCoursComponent apiUrl="http://www.rimo0631.odns.fr/wp-json/custom/v2/rencontres_actuelles" />}
           />
           {/* Ajoutez d'autres routes pour vos autres composants ici */}
         </Routes>

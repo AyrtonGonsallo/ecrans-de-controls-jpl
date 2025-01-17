@@ -19,34 +19,38 @@ const TableauClassementComponent = ({ apiUrl }) => {
   
 
   return (
-    <table className="tableau-jpl">
-      <thead>
-        <tr>
-          <th>Rang</th>
-          <th>Équipe</th>
-          <th>Points</th>
-          <th>Bonus</th>
-          <th>J</th>
-          <th>V</th>
-          <th>D</th>
-          <th>N</th>
-        </tr>
-      </thead>
-      <tbody>
-        {data.map((item, index) => (
-          <tr key={index}>
-            <td>{item.rang}</td>
-            <td><img width="24px" height="24px" src={item.logo_circle} alt={item.logo_circle}/> {item.titre}</td>
-            <td>{item.points}</td>
-            <td>{item.bonus}</td>
-            <td>{item.matchs_joues}</td>
-            <td>{item.victoires}</td>
-            <td>{item.defaites}</td>
-            <td>{item.nuls}</td>
+    <div>
+      <div className='classement-journee'>{data[0]?.phase}</div>
+      <table className="tableau-jpl">
+        <thead>
+          <tr>
+            <th>Rang</th>
+            <th>Équipe</th>
+            <th>Points</th>
+            <th>Bonus</th>
+            <th>J</th>
+            <th>V</th>
+            <th>D</th>
+            <th>N</th>
           </tr>
-        ))}
-      </tbody>
-    </table>
+        </thead>
+        <tbody>
+          {data.map((item, index) => (
+            <tr key={index}>
+              <td>{item.rang}</td>
+              <td><img width="24px" height="24px" src={item.logo_circle} alt={item.logo_circle}/> {item.titre}</td>
+              <td>{item.points}</td>
+              <td>{item.bonus}</td>
+              <td>{item.matchs_joues}</td>
+              <td>{item.victoires}</td>
+              <td>{item.defaites}</td>
+              <td>{item.nuls}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    
   );
 };
 
